@@ -54,20 +54,15 @@ Each notebook corresponds to a specific modeling or geometry test case used in F
 
 #### FWI_Model_More_source.ipynb
 FWI modeling test with an increased number of seismic sources, used to study the influence of source count on imaging results.
-
-### FWI_Model_Opt1a.ipynb
+#### FWI_Model_Opt1a.ipynb
 FWI geometry optimization test case labeled Opt1a.
-
-### FWI_Model_Opt1b.ipynb
+#### FWI_Model_Opt1b.ipynb
 FWI geometry optimization test case labeled Opt1b.
-
-### FWI_Model_Opt1c.ipynb
+#### FWI_Model_Opt1c.ipynb
 FWI geometry optimization test case labeled Opt1c.
-
-### Modeling_Model_surface.ipynb
+#### Modeling_Model_surface.ipynb
 Forward seismic modeling for surface acquisition geometry.
-
-### Modeling_Model_VSP.ipynb
+#### Modeling_Model_VSP.ipynb
 Forward seismic modeling for VSP-style acquisition geometry.
 
 Each notebook is designed to be run independently and used for controlled comparison of different acquisition geometries and modeling setups.
@@ -81,7 +76,7 @@ It is not a production processing system and does not include proprietary field 
 
 ---
 
-## Contact
+##📬 Contact
 
 For questions, issues, or contributions, please contact:
 
