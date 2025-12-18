@@ -1,81 +1,93 @@
-Optimal-Geometry-FWI
+# Optimal-Geometry-FWI
 
-Optimal-Geometry-FWI is a Python-based research code for optimal acquisition geometry design in Full Waveform Inversion (FWI). The package is developed for geometry evaluation and survey design in both land and marine seismic acquisition, with emphasis on physics-based imaging capability rather than inversion algorithm development.
+**Optimal-Geometry-FWI** is a **Python-based** source code package developed by **Dr. Xu Shibo** from **ENEOS Xplora**. It provides a modular framework for **optimal acquisition geometry design** in **Full Waveform Inversion (FWI)**, targeting both **land and marine seismic surveys**.
 
-The code provides a controlled framework to study how source窶途eceiver layout, aperture, and deployment style influence FWI imaging performance. It supports surface seismic, VSP-style, and hybrid geometries, and is applicable to baseline and time-lapse (4D) monitoring problems.
+The package focuses on quantifying how **source-receiver geometry controls imaging capability** in FWI, rather than on inversion algorithm development. By combining forward modeling, inversion, and quantitative imaging metrics, users can systematically evaluate survey designs, compare acquisition scenarios, and identify optimal geometries under practical constraints.
 
----
-
-Scope
-
-This repository is intended for survey design and feasibility studies.
-
-Primary objectives:
-- Quantify geometry-controlled imaging capability in FWI
-- Compare land and marine acquisition geometries
-- Evaluate source窶途eceiver aperture and spacing effects
-- Identify optimal geometries under practical constraints
-- Provide reproducible and quantitative geometry-ranking metrics
+The toolkit supports surface seismic, VSP-style, and hybrid acquisition configurations, and is applicable to baseline and time-lapse (4D) monitoring problems, including CCS-related feasibility studies. The code is organized for flexibility and extensibility, enabling geometry sensitivity analysis, aperture studies, and imaging-map construction using reproducible synthetic experiments.
 
 ---
 
-Key Features
+## Installation
 
-- Parameterized source and receiver geometry definition
-- Acoustic and elastic forward modeling support
-- Conventional FWI and double-difference FWI (DD-FWI)
-- Imaging-map construction for geometry evaluation
-- Quantitative metrics such as lateral imaging distance and image stability
-- Modular structure for systematic geometry sweeps
-
----
-
-Installation
-
-Clone the repository:
+To install **Optimal-Geometry-FWI**, first clone the repository:
 
 git clone https://github.com/XU-SB/Optimal-Geometry-FWI.git
 
-The code is developed and tested on Linux systems.
-Use of a virtual environment or Conda environment is recommended.
+The package is designed to run on **Linux systems**.
+
+For full functionality, it is recommended to use **JupyterLab** within a **virtual environment**.
 
 ---
 
-Dependencies
+## Required Modules
 
 Core dependencies:
+
+- pyseis
 - numpy
-- scipy
 - matplotlib
 - pandas
-- pyseis
+- scipy
 
-Optional dependencies:
-- jupyterlab
-- nbformat
-- papermill
-- lasio
+Optional (but useful) modules:
 
----
-
-GPU Requirements
-
-This package is designed for GPU-accelerated computation.
-
-- At least one NVIDIA GPU with CUDA support is required for FWI
-- Elastic FWI and large geometry sweeps benefit from multiple GPUs
-- CPU-only execution is suitable only for small forward-modeling tests
+- papermill (for batch or parallel execution)
+- lasio (for well log input)
+- nbformat (for notebook handling)
 
 ---
 
-Intended Use
+## GPU Requirements
 
-This code is intended for research, feasibility analysis, and methodology development in seismic survey design.
-It is not a production processing system and does not include field data.
+This package is designed for **GPU-based computation**.
+
+At least one **NVIDIA GPU** with CUDA support is required to run FWI.  
+For elastic FWI and large geometry sweeps, **multiple GPUs** are recommended.
 
 ---
 
-Contact
+## Package Overview
 
-Developer: Xu Shibo
-Email: xushibo11@gmail.com
+The package is organized into several functional modules, each targeting a specific aspect of geometry design and evaluation:
+
+### Module 1: Forward Modeling
+
+Acoustic and elastic forward modeling for land and marine survey configurations, including surface and VSP-style geometries.
+
+### Module 2: Geometry Definition
+
+Parameterization of source and receiver layouts, including spacing, aperture, and deployment type.
+
+### Module 3: Geometry-Based Tests
+
+Systematic evaluation of different acquisition geometries using conventional FWI and double-difference FWI (DD-FWI).
+
+### Module 4: Sensitivity and Feasibility Analysis
+
+Assessment of geometry robustness under:
+- Aperture limitation
+- Source-receiver spacing variation
+- Initial model uncertainty
+- Noise contamination
+
+### Module 5: Imaging Map Generation
+
+Construction of imaging maps and quantitative metrics, such as lateral imaging distance and image stability, for geometry ranking.
+
+---
+
+## Intended Use
+
+This code is intended for **research, feasibility analysis, and survey design studies**.  
+It is not a production processing system and does not include proprietary field data.
+
+---
+
+## Contact
+
+For questions, issues, or contributions, please contact:
+
+Xu Shibo  
+xushibo11@gmail.com  
+xu.shibo@eneos.com
