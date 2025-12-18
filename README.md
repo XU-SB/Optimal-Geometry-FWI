@@ -49,31 +49,28 @@ For elastic FWI and large geometry sweeps, **multiple GPUs** are recommended.
 
 ## Package Overview
 
-The package is organized into several functional modules, each targeting a specific aspect of geometry design and evaluation:
+This repository is organized primarily around a set of Jupyter notebooks.
+Each notebook corresponds to a specific modeling or geometry test case used in FWI geometry evaluation.
 
-### Module 1: Forward Modeling
+### FWI_Model_More_source.ipynb
+FWI modeling test with an increased number of seismic sources, used to study the influence of source count on imaging results.
 
-Acoustic and elastic forward modeling for land and marine survey configurations, including surface and VSP-style geometries.
+### FWI_Model_Opt1a.ipynb
+FWI geometry optimization test case labeled Opt1a.
 
-### Module 2: Geometry Definition
+### FWI_Model_Opt1b.ipynb
+FWI geometry optimization test case labeled Opt1b.
 
-Parameterization of source and receiver layouts, including spacing, aperture, and deployment type.
+### FWI_Model_Opt1c.ipynb
+FWI geometry optimization test case labeled Opt1c.
 
-### Module 3: Geometry-Based Tests
+### Modeling_Model_surface.ipynb
+Forward seismic modeling for surface acquisition geometry.
 
-Systematic evaluation of different acquisition geometries using conventional FWI and double-difference FWI (DD-FWI).
+### Modeling_Model_VSP.ipynb
+Forward seismic modeling for VSP-style acquisition geometry.
 
-### Module 4: Sensitivity and Feasibility Analysis
-
-Assessment of geometry robustness under:
-- Aperture limitation
-- Source-receiver spacing variation
-- Initial model uncertainty
-- Noise contamination
-
-### Module 5: Imaging Map Generation
-
-Construction of imaging maps and quantitative metrics, such as lateral imaging distance and image stability, for geometry ranking.
+Each notebook is designed to be run independently and used for controlled comparison of different acquisition geometries and modeling setups.
 
 ---
 
