@@ -52,7 +52,7 @@ For elastic FWI and large geometry sweeps, **multiple GPUs** are recommended.
 This repository is organized primarily around a set of Jupyter notebooks.
 Each notebook corresponds to a specific modeling or geometry test case used in FWI geometry evaluation.
 
-### FWI_Model_More_source.ipynb
+#### FWI_Model_More_source.ipynb
 FWI modeling test with an increased number of seismic sources, used to study the influence of source count on imaging results.
 
 ### FWI_Model_Opt1a.ipynb
